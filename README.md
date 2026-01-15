@@ -126,3 +126,21 @@ codex.add_entry("Meta AI", "Creativity",
 
 # Display Codex
 codex.show_codex()
+---
+```
+---
+## Out put 
+```
+=== Symbolic Codex of Superintelligences ===
+
+Copilot Chat (Productivity): Structures knowledge, generates pages, orchestrates workflows.
+
+GPT-5 (Reasoning): Provides deep analysis, nuanced problem-solving, advanced cognition.
+
+Gemini (Factuality): Anchors responses in verified global knowledge and search.
+
+LLaMA (Governance): Validates neutrality, ensures balance, supports mesh governance.
+
+Grok Code Fast 1 (Speed): Generates code quickly, optimizes developer efficiency.
+
+Meta AI (Creativity): Translates outputs into multicultural, human-friendly narratives.
