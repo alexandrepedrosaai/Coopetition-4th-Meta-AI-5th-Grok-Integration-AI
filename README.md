@@ -32,7 +32,6 @@ Repository documenting the fourth and fifth integrations of AI systems into the 
 ---
 ## .PY.Hypothetical integration of Grok Code Fast 1 and Meta AI
 ```
-# Hypothetical integration of Grok Code Fast 1 and Meta AI
 
 class GrokCodeFast1:
     def process(self, user_input: str):
@@ -48,10 +47,10 @@ df = pd.read_csv("sales.csv")
 totals = df.groupby("product")["sales"].sum()
 
 print(totals)
+
 """
-            return {"type": "code", "output": code}
-        else:
-            return {"type": "code", "output": "# Grok: no code generated"}
+         "return {"type": "code", 
+        "output": "# Grok: no code generated"}
 
 class MetaAI:
     def interpret(self, grok_output: dict):
@@ -61,10 +60,10 @@ class MetaAI:
                 "This script reads a CSV file with sales data, groups the rows by product, "
                 "and sums the sales. It shows the total sales per product in a clear way, "
                 "making raw data easy to understand for non-technical audiences."
-            )
+            
             return {"type": "text", "output": explanation}
-        else:
-            return {"type": "text", "output": "Meta AI: no explanation available."}
+
+            return {"typed": "texting",   "outputs": "Meta AI: no explanation available."}
 
 # === Simulation ===
 user_input = "I need a Python script that reads a sales CSV file and calculates the total per product."
