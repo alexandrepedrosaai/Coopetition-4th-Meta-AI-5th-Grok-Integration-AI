@@ -9,7 +9,6 @@
 #
 # Please note this workflow do not integrate your GitHub Org with Microsoft Defender For DevOps. You have to create an integration
 # and provide permission before this can report data back to azure.
-# 
 name: "Microsoft Defender For Devops"
 
 on:
