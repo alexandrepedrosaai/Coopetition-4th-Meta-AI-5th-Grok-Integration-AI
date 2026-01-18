@@ -1,0 +1,30 @@
+name: Deploy para Azure - Staging
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - run: npm install
+
+      - name: Rodar testes
+        run: npm test
+
+      - name: Deploy para slot de staging
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'NOME-DO-APP'
+          slot-name: 'staging'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_STAGING }}
+          package: .
