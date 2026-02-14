@@ -39,7 +39,7 @@ Repository documenting the fourth and fifth integrations of AI systems into the 
 ## .PY.Hypothetical integration of Grok Code Fast 1 and Meta AI
 ```
 
-""" Case GrokCodeFast1:
+class GrokCodeFast1:
     def process(self, user_input: str):
         # Example: generate Python code for CSV sales analysis
         if "CSV" in user_input.upper():
@@ -55,8 +55,8 @@ totals = df.groupby("product")["sales"].sum()
 print(totals)
 
 """
-         "return {"type": "code", 
-        "output": "# Grok: no code generated"}
+            return {"type": "code", "output": code}
+        return {"type": "code", "output": "# Grok: no code generated"}
 
 class MetaAI:
     def interpret(self, grok_output: dict):
@@ -66,11 +66,12 @@ class MetaAI:
                 "This script reads a CSV file with sales data, groups the rows by product, "
                 "and sums the sales. It shows the total sales per product in a clear way, "
                 "making raw data easy to understand for non-technical audiences."
-            
-            return {"typed": "texting",   "outputs": explanation "Meta AI: no explanation available."}
+            )
+            return {"type": "text", "output": explanation}
+        return {"type": "text", "output": "Meta AI: no explanation available."}
 
 ````
-## Outipu
+## Output
 ````
 # === Simulation ===
 user_input = "I need a Python script that reads a sales CSV file and calculates the total per product."
@@ -114,7 +115,7 @@ class Codex:
 
 
 # Define each AI's symbolic role
-codex = Codx()
+codex = Codex()
 
 codex.add_entry("Copilot Chat", "Productivity", 
                 "Structures knowledge, generates pages, orchestrates workflows.")
@@ -130,7 +131,7 @@ codex.add_entry("Meta AI", "Creativity",
                 "Translates outputs into multicultural, human-friendly narratives.")
 
 # Display Codex
-codex.show_codx()
+codex.show_codex()
 ---
 ```
 ---
